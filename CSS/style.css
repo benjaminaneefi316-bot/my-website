@@ -388,6 +388,19 @@ h3 {
   color: var(--teal);
 }
 
+.resource-links .satellite-button {
+  color: #fff;
+  background: var(--blue);
+  border-color: var(--blue);
+}
+
+.resource-links .satellite-button:hover,
+.resource-links .satellite-button:focus-visible {
+  color: #fff;
+  background: var(--teal);
+  border-color: var(--teal);
+}
+
 .deadline-panel {
   padding: 28px;
   background: #fff7ed;

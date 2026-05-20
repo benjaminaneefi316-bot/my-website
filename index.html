@@ -1,333 +1,467 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Data Communication Assignment | Benjamin Aneefi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Communication Portfolio | Benjamin Aneefi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Data Communication assignment home">
-      <span class="brand-mark">DC</span>
-      <span>Data Communication Assignment</span>
-    </a>
-    <nav class="nav-menu" aria-label="Primary navigation">
-      <a href="#home">Home</a>
-      <a href="#bio">Bio</a>
-      <a href="#topics">Topics</a>
-      <a href="#telegraph">Telegraph</a>
-      <a href="#resources">Resources</a>
-      <a href="#inspiration">Inspiration</a>
+    <nav class="nav-shell" aria-label="Primary navigation">
+      <a class="brand" href="#home">DataComm Study Hub</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="primary-menu" class="nav-menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#concepts">Concepts</a></li>
+        <li><a href="#topic-details">Topics</a></li>
+        <li><a href="#telegraph">Telegraph</a></li>
+        <li><a href="#inspiration">Inspiration</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero section">
+    <section id="home" class="hero section-band">
       <div class="hero-copy">
-        <p class="eyebrow">PUIT/24210173</p>
-        <h1>What I Have Learnt This Semester in Data Communication</h1>
-        <p>
-          A clear summary of networking fundamentals, signals, transmission media,
-          wireless technologies, security, privacy, and practical network simulation.
+        <p class="eyebrow">Data Communication Assignment</p>
+        <h1>Everything I have studied in data communication</h1>
+        <p class="hero-text">
+          A clear summary of how information travels from one device to another through signals,
+          media, protocols, switching, addressing, and network security.
         </p>
         <div class="hero-actions">
-          <a class="button primary" href="resources/assignment-turnitin.html" target="_blank" rel="noopener">Open Assignment</a>
-          <a class="button secondary" href="#topics">View Topics</a>
+          <a class="primary-link" href="resources/assignment-turnitin.html" target="_blank" rel="noopener">Open Assignment</a>
+          <a class="secondary-link" href="https://www.turnitin.com/assignment/type/paper/dashboard/184475073?lang=en_us" target="_blank" rel="noopener">Submit on Turnitin</a>
+          <a class="secondary-link" href="#resources">View Resources</a>
         </div>
       </div>
-      <figure class="hero-portrait">
-        <img src="IMAGES/index1.png" alt="Benjamin Aneefi data communication profile image" />
-      </figure>
+
+      <aside class="profile-panel" aria-label="Student profile">
+        <img src="images/index1.png" alt="Benjamin Aneefi data communication profile image">
+        <div>
+          <h2>Benjamin Aneefi</h2>
+          <p class="student-id">Student ID: PUIT/24210173</p>
+          <p>
+            I am a technology-minded student interested in networking, internet systems, and the
+            way communication infrastructure connects people, schools, businesses, and communities.
+          </p>
+        </div>
+      </aside>
     </section>
 
-    <section id="bio" class="section content-grid">
-      <div>
-        <p class="eyebrow">Student Profile</p>
-        <h2>Benjamin Aneefi</h2>
+    <section id="concepts" class="section-band light">
+      <div class="section-heading">
+        <p class="eyebrow">Course Topic Links</p>
+        <h2>Click a topic to read the summary</h2>
         <p>
-          I am Benjamin Aneefi, a student learning how computers, devices, and people exchange
-          information across wired and wireless networks. This semester helped me understand that
-          data communication is not only about sending messages, but also about reliability,
-          speed, security, and responsible use of technology.
+          Each topic below links to a short explanation, key subtopics, and the learning activity
+          used in class. The repeated textbook column has been replaced with useful subtopics.
         </p>
       </div>
-      <div class="profile-card">
-        <img src="IMAGES/index1.png" alt="Portrait of Benjamin Aneefi" />
-        <div>
-          <h3>Course Focus</h3>
-          <p>Data Communication, Networking, Security, Cryptography, and Network Simulation.</p>
-        </div>
-      </div>
-    </section>
 
-    <section id="topics" class="section">
-      <div class="section-heading">
-        <p class="eyebrow">Semester Map</p>
-        <h2>Topics Covered</h2>
-      </div>
-      <div class="topic-grid">
-        <article>
-          <span>01</span>
-          <h3>Introduction to Data Communication</h3>
-          <p>Meaning, components, protocols, message flow, and why communication systems matter.</p>
-        </article>
-        <article>
-          <span>02</span>
+      <div class="concept-grid">
+        <a class="concept-card topic-link" href="#networking-fundamentals">
+          <span class="card-number">02</span>
           <h3>Networking Fundamentals</h3>
-          <p>Nodes, links, bandwidth, topology, addressing, switching, routing, and network services.</p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Reference Models</h3>
-          <p>How OSI and TCP/IP models organize communication into layers with clear responsibilities.</p>
-        </article>
-        <article>
-          <span>04</span>
+          <p>
+            Devices, links, protocols, bandwidth, latency, IP addressing, and basic network types.
+          </p>
+        </a>
+        <a class="concept-card topic-link" href="#network-reference-models">
+          <span class="card-number">03</span>
+          <h3>Network and Network Reference Models</h3>
+          <p>
+            OSI and TCP/IP layers explain how data moves from applications to physical media.
+          </p>
+        </a>
+        <a class="concept-card topic-link" href="#transmission-media">
+          <span class="card-number">04</span>
           <h3>Transmission Media</h3>
-          <p>Guided and unguided media including twisted pair, coaxial cable, fiber optics, radio, and microwave.</p>
-        </article>
-        <article>
-          <span>05</span>
+          <p>
+            Copper cable, fiber optics, radio, microwave, satellite, and infrared transmission.
+          </p>
+        </a>
+        <a class="concept-card topic-link" href="#signals">
+          <span class="card-number">05</span>
           <h3>Signals</h3>
-          <p>Analog and digital signals, frequency, amplitude, noise, attenuation, and signal quality.</p>
-        </article>
-        <article>
-          <span>06</span>
-          <h3>Wireless Networks</h3>
-          <p>Wi-Fi, Bluetooth, cellular networks, wireless standards, mobility, and coverage challenges.</p>
-        </article>
-        <article>
-          <span>07</span>
+          <p>
+            Analog and digital signals, modulation, encoding, noise, attenuation, and bandwidth.
+          </p>
+        </a>
+        <a class="concept-card topic-link" href="#wireless-networks">
+          <span class="card-number">06</span>
+          <h3>Wireless Networks and Technologies</h3>
+          <p>
+            Wi-Fi, Bluetooth, cellular networks, radio channels, mobility, and wireless security.
+          </p>
+        </a>
+        <a class="concept-card topic-link" href="#cia-cryptography">
+          <span class="card-number">07</span>
           <h3>CIA Triad and Cryptography</h3>
-          <p>Confidentiality, integrity, availability, encryption, keys, hashing, and authentication.</p>
-        </article>
-        <article>
-          <span>08</span>
-          <h3>Cybersecurity</h3>
-          <p>Threats, vulnerabilities, controls, safe network use, firewalls, and defensive practices.</p>
-        </article>
-        <article>
-          <span>09</span>
-          <h3>Data Protection Policies</h3>
-          <p>Privacy laws, organizational policies, consent, accountability, and responsible data handling.</p>
-        </article>
-        <article>
-          <span>10</span>
+          <p>
+            Confidentiality, integrity, availability, encryption, hashes, and digital signatures.
+          </p>
+        </a>
+        <a class="concept-card topic-link" href="#network-security">
+          <span class="card-number">08</span>
+          <h3>Data, Network, and Cybersecurity</h3>
+          <p>
+            Threats, vulnerabilities, firewalls, malware protection, access control, and monitoring.
+          </p>
+        </a>
+        <a class="concept-card topic-link" href="#data-protection">
+          <span class="card-number">09</span>
+          <h3>Data Protection Policies and Acts</h3>
+          <p>
+            Privacy laws, compliance duties, consent, lawful processing, and industry standards.
+          </p>
+        </a>
+        <a class="concept-card topic-link" href="#simulation-practical">
+          <span class="card-number">10</span>
           <h3>Network Simulation Practical</h3>
-          <p>Using simulation tools to design, test, and troubleshoot networks before real deployment.</p>
-        </article>
-        <article>
-          <span>11</span>
+          <p>
+            Building and testing virtual networks with devices, cables, addresses, and protocols.
+          </p>
+        </a>
+        <a class="concept-card topic-link" href="#class-presentation">
+          <span class="card-number">11</span>
           <h3>Class Presentation</h3>
-          <p>Explaining technical ideas clearly and connecting communication theory to real systems.</p>
-        </article>
-        <article>
-          <span>12</span>
+          <p>
+            Explaining a communication topic clearly with examples, diagrams, and references.
+          </p>
+        </a>
+        <a class="concept-card topic-link" href="#revision">
+          <span class="card-number">12</span>
           <h3>Revision</h3>
-          <p>Reviewing all course materials and connecting individual topics into one complete picture.</p>
-        </article>
+          <p>
+            Reviewing all course materials through questions, summaries, and interactive practice.
+          </p>
+        </a>
+      </div>
+    </section>
+
+    <section id="topic-details" class="section-band">
+      <div class="section-heading">
+        <p class="eyebrow">Topic Notes</p>
+        <h2>Course outline with subtopics</h2>
+        <p>
+          These notes explain what each topic means in data communication and list the subtopics to
+          study before lectures, tutorials, practicals, presentations, and revision.
+        </p>
       </div>
 
-      <div class="schedule-panel">
-        <h3>Weekly Course Schedule</h3>
-        <div class="table-wrap">
-          <table>
-            <thead>
-              <tr>
-                <th>Week</th>
-                <th>Module / Topic</th>
-                <th>Reading Materials</th>
-                <th>Activity</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Introduction to Data Communication</td>
-                <td>Prescribed textbooks and online materials</td>
-                <td>Lectures / Tutorial</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Networking Fundamentals</td>
-                <td>Prescribed textbooks and online materials</td>
-                <td>Lectures / Tutorial</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Network and Network Reference Models</td>
-                <td>Prescribed textbooks and online materials</td>
-                <td>Lectures / Tutorial</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Transmission Media</td>
-                <td>Prescribed textbooks and online materials</td>
-                <td>Lectures / Tutorial</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>Signals</td>
-                <td>Prescribed textbooks and online materials</td>
-                <td>Lectures / Tutorial</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>Wireless Networks and Technologies</td>
-                <td>Prescribed textbooks and online materials</td>
-                <td>Lectures / Tutorial</td>
-              </tr>
-              <tr>
-                <td>7</td>
-                <td>CIA Triad and Cryptography</td>
-                <td>Prescribed textbooks and online materials</td>
-                <td>Lectures / Tutorial</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>Data Security, Network Security and Cybersecurity</td>
-                <td>Prescribed textbooks and online materials</td>
-                <td>Lectures / Tutorial</td>
-              </tr>
-              <tr>
-                <td>9</td>
-                <td>Review of Data Protection Policies and Acts</td>
-                <td>Legislative instruments and industry standard documents</td>
-                <td>Lectures / Tutorial</td>
-              </tr>
-              <tr>
-                <td>10</td>
-                <td>Network Simulation Practical</td>
-                <td>Prescribed textbooks and online materials</td>
-                <td>Practical</td>
-              </tr>
-              <tr>
-                <td>11</td>
-                <td>Class Presentation</td>
-                <td>Prescribed textbooks and online materials</td>
-                <td>Presentation</td>
-              </tr>
-              <tr>
-                <td>12</td>
-                <td>Revision</td>
-                <td>All Course Materials</td>
-                <td>Interactive Review</td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="topic-detail-grid">
+        <article id="networking-fundamentals" class="topic-detail-card">
+          <div class="topic-meta"><span>Week 2</span><span>Lectures / Tutorial</span></div>
+          <h3>Networking Fundamentals</h3>
+          <p>
+            Networking fundamentals introduce how computers and devices connect to share data,
+            resources, and services. This topic explains the purpose of networks and the basic
+            language used to describe communication systems.
+          </p>
+          <h4>Subtopics</h4>
+          <ul>
+            <li>Network devices, nodes, links, clients, servers, and peer-to-peer communication.</li>
+            <li>LAN, MAN, WAN, internet, intranet, bandwidth, throughput, latency, and reliability.</li>
+            <li>IP addresses, MAC addresses, ports, protocols, packets, and basic troubleshooting.</li>
+          </ul>
+        </article>
+
+        <article id="network-reference-models" class="topic-detail-card">
+          <div class="topic-meta"><span>Week 3</span><span>Lectures / Tutorial</span></div>
+          <h3>Network and Network Reference Models</h3>
+          <p>
+            Reference models break communication into layers so network tasks are easier to
+            understand, design, and troubleshoot. They show how data is prepared, addressed,
+            transmitted, routed, and delivered to an application.
+          </p>
+          <h4>Subtopics</h4>
+          <ul>
+            <li>OSI model layers: physical, data link, network, transport, session, presentation, application.</li>
+            <li>TCP/IP model layers and how they compare with the OSI model.</li>
+            <li>Encapsulation, decapsulation, protocols, addressing, routing, and service delivery.</li>
+          </ul>
+        </article>
+
+        <article id="transmission-media" class="topic-detail-card">
+          <div class="topic-meta"><span>Week 4</span><span>Lectures / Tutorial</span></div>
+          <h3>Transmission Media</h3>
+          <p>
+            Transmission media are the physical or wireless paths that carry signals between
+            devices. The chosen medium affects speed, distance, cost, security, and resistance to
+            interference.
+          </p>
+          <h4>Subtopics</h4>
+          <ul>
+            <li>Guided media: twisted pair cable, coaxial cable, and fiber optic cable.</li>
+            <li>Unguided media: radio waves, microwaves, infrared, and satellite communication.</li>
+            <li>Media selection based on bandwidth, attenuation, noise, cost, installation, and coverage.</li>
+          </ul>
+        </article>
+
+        <article id="signals" class="topic-detail-card">
+          <div class="topic-meta"><span>Week 5</span><span>Lectures / Tutorial</span></div>
+          <h3>Signals</h3>
+          <p>
+            Signals are the electrical, optical, or radio forms used to carry data. Understanding
+            signals helps explain how binary data moves through real communication channels.
+          </p>
+          <h4>Subtopics</h4>
+          <ul>
+            <li>Analog and digital signals, amplitude, frequency, phase, period, and wavelength.</li>
+            <li>Encoding, modulation, multiplexing, bandwidth, bit rate, and baud rate.</li>
+            <li>Noise, distortion, attenuation, interference, and signal quality improvement.</li>
+          </ul>
+        </article>
+
+        <article id="wireless-networks" class="topic-detail-card">
+          <div class="topic-meta"><span>Week 6</span><span>Lectures / Tutorial</span></div>
+          <h3>Wireless Networks and Technologies</h3>
+          <p>
+            Wireless networking allows devices to communicate without physical cables. It supports
+            mobility, flexible access, and wide coverage, but it also needs careful security and
+            interference management.
+          </p>
+          <h4>Subtopics</h4>
+          <ul>
+            <li>Wi-Fi, Bluetooth, cellular networks, hotspot access, and wireless access points.</li>
+            <li>Radio frequency, channels, signal strength, coverage, roaming, and interference.</li>
+            <li>Wireless standards, authentication, encryption, and safe public network use.</li>
+          </ul>
+        </article>
+
+        <article id="cia-cryptography" class="topic-detail-card">
+          <div class="topic-meta"><span>Week 7</span><span>Lectures / Tutorial</span></div>
+          <h3>CIA Triad and Cryptography</h3>
+          <p>
+            The CIA triad explains the three main goals of information security: keeping data
+            private, accurate, and available. Cryptography supports these goals by protecting data
+            while it is stored or transmitted.
+          </p>
+          <h4>Subtopics</h4>
+          <ul>
+            <li>Confidentiality, integrity, availability, authentication, authorization, and non-repudiation.</li>
+            <li>Symmetric encryption, asymmetric encryption, public and private keys.</li>
+            <li>Hashing, digital signatures, certificates, SSL/TLS, and secure communication.</li>
+          </ul>
+        </article>
+
+        <article id="network-security" class="topic-detail-card">
+          <div class="topic-meta"><span>Week 8</span><span>Lectures / Tutorial</span></div>
+          <h3>Data Security, Network Security and Cybersecurity</h3>
+          <p>
+            This topic focuses on protecting data and systems from unauthorized access, misuse,
+            disruption, and attack. It connects technical controls with responsible user behavior.
+          </p>
+          <h4>Subtopics</h4>
+          <ul>
+            <li>Malware, phishing, social engineering, denial-of-service attacks, and insider threats.</li>
+            <li>Firewalls, antivirus tools, intrusion detection, VPNs, backups, and patch management.</li>
+            <li>Password safety, multi-factor authentication, access control, monitoring, and incident response.</li>
+          </ul>
+        </article>
+
+        <article id="data-protection" class="topic-detail-card">
+          <div class="topic-meta"><span>Week 9</span><span>Lectures / Tutorial</span></div>
+          <h3>Review of Data Protection Policies and Acts</h3>
+          <p>
+            Data protection policies and laws guide how personal and organizational information
+            should be collected, used, stored, shared, and deleted. They help protect privacy and
+            build trust in digital systems.
+          </p>
+          <h4>Legislative instruments and industry standard documents</h4>
+          <ul>
+            <li>Privacy principles, consent, lawful processing, data minimization, accuracy, and retention.</li>
+            <li>Rights of data subjects, breach reporting, accountability, and organizational policies.</li>
+            <li>Examples of protection frameworks, cybersecurity standards, and acceptable use policies.</li>
+          </ul>
+        </article>
+
+        <article id="simulation-practical" class="topic-detail-card">
+          <div class="topic-meta"><span>Week 10</span><span>Practical</span></div>
+          <h3>Network Simulation Practical</h3>
+          <p>
+            Network simulation practicals allow students to design and test networks in software
+            before building them physically. They make it easier to see how devices communicate and
+            how configuration choices affect performance.
+          </p>
+          <h4>Subtopics</h4>
+          <ul>
+            <li>Creating topologies with PCs, switches, routers, servers, and wireless devices.</li>
+            <li>Configuring IP addresses, subnet masks, gateways, routing, and basic services.</li>
+            <li>Testing connectivity with ping, packet tracing, and troubleshooting failed links.</li>
+          </ul>
+        </article>
+
+        <article id="class-presentation" class="topic-detail-card">
+          <div class="topic-meta"><span>Week 11</span><span>Presentation</span></div>
+          <h3>Class Presentation</h3>
+          <p>
+            Class presentations help students explain technical ideas clearly and confidently. A
+            good presentation uses simple language, correct terminology, diagrams, and examples from
+            real communication systems.
+          </p>
+          <h4>Subtopics</h4>
+          <ul>
+            <li>Choosing a topic, researching credible sources, and organizing main points.</li>
+            <li>Using diagrams, examples, demonstrations, and clear slide structure.</li>
+            <li>Speaking confidently, answering questions, and citing materials properly.</li>
+          </ul>
+        </article>
+
+        <article id="revision" class="topic-detail-card">
+          <div class="topic-meta"><span>Week 12</span><span>Interactive Review</span></div>
+          <h3>Revision</h3>
+          <p>
+            Revision brings all course materials together so students can check understanding,
+            correct weak areas, and prepare for assessment. It is most effective when it combines
+            summaries, practice questions, diagrams, and discussion.
+          </p>
+          <h4>All Course Materials</h4>
+          <ul>
+            <li>Networking fundamentals, models, media, signals, wireless technologies, and security.</li>
+            <li>Data protection policies, simulation practicals, presentation topics, and key definitions.</li>
+            <li>Past questions, class notes, diagrams, group discussion, and self-testing.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="systems" class="section-band">
+      <div class="split-layout">
+        <div>
+          <p class="eyebrow">Communication Systems</p>
+          <h2>From local links to global networks</h2>
+          <p>
+            Modern communication systems combine hardware and software. Network interface cards,
+            switches, routers, modems, access points, servers, and satellites all help data move
+            from a source to a destination.
+          </p>
+          <ul class="study-list">
+            <li><strong>LAN:</strong> connects devices within a small area such as a room, school, or office.</li>
+            <li><strong>WAN:</strong> connects networks across cities, countries, and continents.</li>
+            <li><strong>Internet:</strong> a global network of networks built on shared standards.</li>
+            <li><strong>Satellite communication:</strong> uses uplink and downlink radio signals through orbiting satellites.</li>
+          </ul>
+        </div>
+        <div class="metric-strip" aria-label="Data communication highlights">
+          <div><strong>7</strong><span>OSI layers</span></div>
+          <div><strong>4</strong><span>TCP/IP layers</span></div>
+          <div><strong>2</strong><span>main media types</span></div>
         </div>
       </div>
     </section>
 
-    <section id="learnings" class="section split-band">
-      <div>
-        <p class="eyebrow">Key Learnings</p>
-        <h2>How Data Moves from Sender to Receiver</h2>
-      </div>
-      <div class="learning-list">
-        <p><strong>Encoding:</strong> Data is converted into signals that can travel through a medium.</p>
-        <p><strong>Transmission:</strong> Signals move across cables, fiber, radio waves, or other media.</p>
-        <p><strong>Control:</strong> Protocols manage timing, addressing, errors, flow, and routing.</p>
-        <p><strong>Security:</strong> Cryptography and policies protect data from unauthorized access.</p>
-      </div>
-    </section>
-
-    <section id="telegraph" class="section">
+    <section id="telegraph" class="section-band light">
       <div class="section-heading">
-        <p class="eyebrow">Communication History</p>
-        <h2>Diagram of a Telegraph</h2>
+        <p class="eyebrow">Historical Foundation</p>
+        <h2>Telegraph diagram</h2>
+        <p>
+          The telegraph is one of the earliest electrical communication systems. It used a key,
+          battery, transmission wire, and receiver to send coded pulses over long distances.
+        </p>
       </div>
-      <div class="telegraph-panel" aria-label="Telegraph communication diagram">
-        <svg viewBox="0 0 980 360" role="img" aria-labelledby="telegraph-title telegraph-desc">
-          <title id="telegraph-title">Telegraph system diagram</title>
-          <desc id="telegraph-desc">A sender key connects through a wire to a receiver sounder and battery circuit.</desc>
+
+      <div class="diagram-wrap" role="img" aria-label="Diagram of a telegraph circuit from sender key to receiver sounder">
+        <svg class="telegraph-svg" viewBox="0 0 980 360" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
-              <path d="M0,0 L0,6 L9,3 z" fill="#1456c8" />
+            <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+              <path d="M2 2 L10 6 L2 10 Z" fill="#0f766e"/>
             </marker>
           </defs>
-          <rect x="55" y="190" width="220" height="54" rx="8" fill="#dbeafe" stroke="#12356b" stroke-width="4" />
-          <rect x="95" y="148" width="115" height="20" rx="5" fill="#12356b" />
-          <line x1="115" y1="148" x2="170" y2="105" stroke="#12356b" stroke-width="8" stroke-linecap="round" />
-          <circle cx="178" cy="98" r="14" fill="#f59e0b" stroke="#12356b" stroke-width="4" />
-          <line x1="212" y1="158" x2="245" y2="158" stroke="#12356b" stroke-width="8" stroke-linecap="round" />
-          <text x="165" y="285" text-anchor="middle">Sender Telegraph Key</text>
+          <rect x="35" y="95" width="185" height="150" rx="8" fill="#fff" stroke="#111827" stroke-width="4"/>
+          <text x="128" y="130" text-anchor="middle" class="diagram-title">Station A</text>
+          <text x="128" y="156" text-anchor="middle" class="diagram-label">Morse key</text>
+          <line x1="75" y1="198" x2="150" y2="198" stroke="#111827" stroke-width="8" stroke-linecap="round"/>
+          <line x1="150" y1="198" x2="186" y2="175" stroke="#111827" stroke-width="8" stroke-linecap="round"/>
+          <circle cx="75" cy="198" r="10" fill="#ef4444"/>
+          <circle cx="186" cy="175" r="10" fill="#ef4444"/>
 
-          <path d="M275 215 C400 120, 540 120, 665 215" fill="none" stroke="#1456c8" stroke-width="8" marker-end="url(#arrow)" />
-          <path d="M275 235 C410 315, 520 315, 665 235" fill="none" stroke="#42a5a2" stroke-width="5" stroke-dasharray="14 12" />
-          <text x="470" y="116" text-anchor="middle">Electrical pulses through wire</text>
-          <text x="470" y="332" text-anchor="middle">Return circuit through ground</text>
+          <rect x="290" y="115" width="120" height="110" rx="8" fill="#fef3c7" stroke="#92400e" stroke-width="4"/>
+          <text x="350" y="158" text-anchor="middle" class="diagram-title">Battery</text>
+          <text x="350" y="188" text-anchor="middle" class="diagram-label">power</text>
 
-          <rect x="685" y="178" width="230" height="84" rx="10" fill="#ecfeff" stroke="#12356b" stroke-width="4" />
-          <rect x="735" y="135" width="130" height="28" rx="6" fill="#12356b" />
-          <line x1="750" y1="135" x2="795" y2="104" stroke="#12356b" stroke-width="7" stroke-linecap="round" />
-          <circle cx="807" cy="96" r="13" fill="#f97316" stroke="#12356b" stroke-width="4" />
-          <path d="M720 218 h165" stroke="#1456c8" stroke-width="5" />
-          <path d="M748 238 q52 -35 104 0" fill="none" stroke="#42a5a2" stroke-width="5" />
-          <text x="800" y="304" text-anchor="middle">Receiver Sounder</text>
+          <path d="M220 170 H290" stroke="#0f766e" stroke-width="8" fill="none" marker-end="url(#arrow)"/>
+          <path d="M410 170 C520 70 650 70 760 170" stroke="#0f766e" stroke-width="8" fill="none" stroke-dasharray="18 14" marker-end="url(#arrow)"/>
+          <text x="585" y="88" text-anchor="middle" class="diagram-label">transmission wire carries pulses</text>
 
-          <rect x="410" y="177" width="48" height="78" rx="6" fill="#fff7ed" stroke="#12356b" stroke-width="4" />
-          <rect x="458" y="177" width="48" height="78" rx="6" fill="#fff7ed" stroke="#12356b" stroke-width="4" />
-          <line x1="426" y1="160" x2="426" y2="177" stroke="#12356b" stroke-width="5" />
-          <line x1="490" y1="160" x2="490" y2="177" stroke="#12356b" stroke-width="5" />
-          <text x="458" y="285" text-anchor="middle">Battery</text>
+          <rect x="760" y="95" width="185" height="150" rx="8" fill="#fff" stroke="#111827" stroke-width="4"/>
+          <text x="853" y="130" text-anchor="middle" class="diagram-title">Station B</text>
+          <text x="853" y="156" text-anchor="middle" class="diagram-label">sounder</text>
+          <rect x="802" y="185" width="102" height="28" rx="14" fill="#1d4ed8"/>
+          <line x1="818" y1="185" x2="818" y2="162" stroke="#1d4ed8" stroke-width="7"/>
+          <line x1="888" y1="185" x2="888" y2="162" stroke="#1d4ed8" stroke-width="7"/>
+          <path d="M795 240 C825 278 882 278 912 240" stroke="#111827" stroke-width="5" fill="none"/>
+
+          <path d="M853 245 C710 330 270 330 128 245" stroke="#64748b" stroke-width="5" fill="none"/>
+          <text x="490" y="322" text-anchor="middle" class="diagram-label">return path completes the circuit</text>
         </svg>
+      </div>
+    </section>
+
+    <section id="inspiration" class="section-band inspiration">
+      <div class="section-heading">
+        <p class="eyebrow">What Inspires Me</p>
+        <h2>Communication technology can change access</h2>
         <p>
-          The telegraph is an early example of data communication. A sender presses a key to create
-          electrical pulses, the wire carries the signal, and the receiver converts the pulses into
-          clicks that can be interpreted as Morse code.
+          I am inspired by the way networks make education, business, emergency services, and
+          personal communication possible across distance. Data communication shows that technology
+          is not only about machines; it is about giving people faster access to information,
+          opportunity, and each other.
         </p>
       </div>
+      <blockquote>
+        When a message can travel clearly, securely, and quickly, a person can learn, work, ask for
+        help, and share ideas beyond the limits of their physical location.
+      </blockquote>
     </section>
 
-    <section id="resources" class="section resources">
+    <section id="resources" class="section-band light">
       <div class="section-heading">
-        <p class="eyebrow">Resources and Links</p>
-        <h2>Assignment Links</h2>
+        <p class="eyebrow">Links and Resources</p>
+        <h2>Assignment files, references, and telegraph tutorial</h2>
+        <p>
+          The first resource opens the assignment copy in a new browser tab. The tutorial link below
+          loads a telegraph lesson inside this page, and the Turnitin link opens the submission page.
+        </p>
       </div>
-      <div class="resource-grid">
-        <a href="resources/assignment-turnitin.html" target="_blank" rel="noopener">
-          <strong>Link 2: Assignment Turnitin Copy</strong>
-          <span>Opens the assignment copy in a new tab.</span>
-        </a>
-        <a href="https://www.youtube.com/watch?v=3QhU9jd03a0" target="_blank" rel="noopener">
-          <strong>Data Communication Video</strong>
-          <span>Open the YouTube video in another browser tab.</span>
-        </a>
-        <a href="https://1millioncoders.scratchcode.org/" target="_blank" rel="noopener">
-          <strong>One Million Coders Web Development</strong>
-          <span>Sign-up link for web development learning.</span>
-        </a>
-      </div>
-      <div class="video-tab" id="video">
-        <h3>YouTube Video Inside This Tab</h3>
-        <iframe
-          src="https://www.youtube.com/embed/3QhU9jd03a0"
-          title="Data Communication YouTube video"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-      </div>
-    </section>
 
-    <section id="inspiration" class="section inspiration">
-      <p class="eyebrow">What Inspires Me</p>
-      <h2>Technology Connects People and Protects Ideas</h2>
-      <p>
-        I am inspired by how data communication makes distance feel smaller. A message, payment,
-        lecture, video call, or emergency alert can move across networks in seconds. Learning this
-        course motivates me to understand the systems behind everyday communication and to build
-        digital solutions that are useful, secure, and accessible.
-      </p>
+      <div class="resources-grid">
+        <div class="resource-links">
+          <a href="resources/assignment-turnitin.html" target="_blank" rel="noopener">Link 1: Open my assignment in a new tab</a>
+          <a href="resources/assignment-turnitin.html" target="_blank" rel="noopener">Link 2: Resources and Turnitin copy</a>
+          <a href="https://www.turnitin.com/assignment/type/paper/dashboard/184475073?lang=en_us" target="_blank" rel="noopener">Link 3: Submit on Turnitin</a>
+          <a href="https://www.geeksforgeeks.org/computer-networks/what-is-data-communication/" target="_blank" rel="noopener">Data communication reference</a>
+          <a href="https://www.cloudflare.com/learning/network-layer/what-is-the-osi-model/" target="_blank" rel="noopener">OSI model reference</a>
+          <a href="https://www.youtube.com/embed/5oenjbqynqA" target="video-frame">Play telegraph tutorial inside this tab</a>
+        </div>
+
+        <div class="video-panel">
+          <iframe
+            name="video-frame"
+            src="https://www.youtube.com/embed/5oenjbqynqA"
+            title="Telegraph tutorial video"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>Benjamin Aneefi | ID: PUIT/24210173 | Deadline: 22 May 2026</p>
+  <footer class="site-footer">
+    <p>Created by Benjamin Aneefi for Data Communication, 2026.</p>
   </footer>
+
+  <script src="JS/main.js"></script>
 </body>
 </html>

@@ -1,17 +1,15 @@
-# Data Communication Assignment
+# Data Communication Portfolio
 
-Student: Benjamin Aneefi  
-ID: PUIT/24210173  
-Deadline: 22 May 2026
+This static web page summarizes key topics studied in data communication.
 
-This repository contains a static website for a Data Communication semester assignment. It includes:
+## Contents
 
-- Student name, ID, bio, and image
-- Navigation links to same-page sections
-- Five-plus content sections
-- A telegraph diagram
-- Assignment/Turnitin copy link that opens in a new tab
-- YouTube video embedded in the page
-- Resources including a One Million Coders web development sign-up link
+- Student profile with image
+- Same-page navigation menu
+- Clickable course topic links with detailed summaries and subtopics
+- Telegraph diagram
+- Inspiration section
+- Assignment resource page and Turnitin submission link
+- Embedded YouTube lecture
 
-Open `index.html` to view the assignment.
+Open `index.html` in a browser or publish the folder with GitHub Pages.

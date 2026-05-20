@@ -1,15 +1,19 @@
-# Data Communication Portfolio
+# Data Communication Assignment
 
-This static web page summarizes key topics studied in data communication.
+Static website for Benjamin Aneefi's Data Communication assignment.
 
-## Contents
+## What is included
 
-- Student profile with image
+- Student name, ID, short bio, and profile image
 - Same-page navigation menu
-- Clickable course topic links with detailed summaries and subtopics
+- Five data communication study sections
 - Telegraph diagram
 - Inspiration section
-- Assignment resource page and Turnitin submission link
-- Embedded YouTube lecture
+- Embedded YouTube video about telegraph communication
+- Assignment and Turnitin resource page
+- Turnitin submission button
+- One Million Coders web development signup link
 
-Open `index.html` in a browser or publish the folder with GitHub Pages.
+## GitHub Pages
+
+Upload this folder to a GitHub repository named `Data Communication assignment`, then enable GitHub Pages from the repository settings. The site entry point is `index.html`.

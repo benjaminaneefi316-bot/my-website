@@ -11,7 +11,7 @@ Static website for Benjamin Aneefi's Data Communication assignment.
 - Inspiration section
 - Embedded YouTube video about telegraph communication
 - Assignment and Turnitin resource page
-- Download link for the Satellite Data Communication document
+- Web view and download link for the Satellite Data Communication document
 - Turnitin submission button
 - One Million Coders web development signup link
 

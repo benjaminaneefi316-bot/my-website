@@ -3,227 +3,383 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Satellite Data Communication Assignment</title>
+  <title>Satellite Data Communication Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
   <style>
-    :root {
-      --ink: #102033;
-      --muted: #607184;
-      --line: #dbe5ef;
-      --teal: #0f766e;
-      --paper: #f6f8fb;
+    html {
+      scroll-padding-top: 86px;
     }
 
-    * {
-      box-sizing: border-box;
+    .report-hero {
+      grid-template-columns: minmax(0, 1fr);
+      min-height: auto;
+      padding-top: 86px;
+      padding-bottom: 64px;
     }
 
-    body {
-      margin: 0;
-      color: var(--ink);
-      background: var(--paper);
-      font-family: Arial, sans-serif;
-      line-height: 1.75;
+    .report-hero h1 {
+      max-width: 980px;
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      background: #fff;
-      border-bottom: 1px solid var(--line);
-    }
-
-    nav,
-    main {
-      width: min(980px, calc(100% - 32px));
-      margin: 0 auto;
-    }
-
-    nav {
+    .report-actions {
       display: flex;
       flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 16px;
-      justify-content: space-between;
-      padding: 16px 0;
     }
 
-    a {
-      color: var(--teal);
-      font-weight: 700;
-      text-decoration: none;
-    }
-
-    main {
-      padding: 44px 0 80px;
-    }
-
-    .document {
-      padding: clamp(22px, 4vw, 48px);
+    .overview-card {
+      min-height: 180px;
+      padding: 22px;
       background: #fff;
       border: 1px solid var(--line);
-      box-shadow: 0 20px 55px rgba(16, 32, 51, 0.12);
+      box-shadow: 0 10px 30px rgba(16, 32, 51, 0.06);
     }
 
-    .button {
-      display: inline-block;
-      margin-bottom: 22px;
-      padding: 12px 16px;
-      color: #fff;
-      background: var(--teal);
+    .overview-card span {
+      display: block;
+      margin-bottom: 20px;
+      color: var(--gold);
+      font-weight: 800;
     }
 
-    h1,
-    h2,
-    h3 {
-      line-height: 1.12;
-    }
-
-    h1 {
-      margin: 0 0 24px;
-      font-size: clamp(2rem, 5vw, 3.6rem);
-    }
-
-    h2 {
-      margin: 42px 0 12px;
-      font-size: clamp(1.45rem, 3vw, 2.2rem);
-    }
-
-    h3 {
-      margin: 28px 0 10px;
-      font-size: 1.18rem;
-    }
-
-    p,
-    li {
+    .overview-card p {
       color: var(--muted);
     }
 
-    p {
-      margin: 0 0 18px;
+    .satellite-diagram {
+      display: block;
+      width: 100%;
+      min-width: 760px;
+      height: auto;
+    }
+
+    .report-shell {
+      background: #fff;
+    }
+
+    .report-layout {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
+    }
+
+    .report-toc {
+      position: sticky;
+      top: 94px;
+      padding: 22px;
+      background: #eef7f6;
+      border: 1px solid #b9ddda;
+    }
+
+    .report-toc h2 {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    .report-toc a {
+      display: block;
+      padding: 8px 0;
+      color: var(--teal);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .report-document {
+      padding: clamp(24px, 4vw, 54px);
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .report-document h2 {
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-size: clamp(1.55rem, 3vw, 2.4rem);
+    }
+
+    .report-document h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .report-document h3 {
+      margin-top: 28px;
+      color: var(--teal);
+      font-size: 1.18rem;
+    }
+
+    .report-document p,
+    .report-document li {
+      color: var(--muted);
+    }
+
+    .report-document ul {
+      display: grid;
+      gap: 10px;
+      padding-left: 22px;
+    }
+
+    @media (max-width: 980px) {
+      .overview-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 860px) {
+      .report-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .report-toc {
+        position: static;
+      }
+    }
+
+    @media (max-width: 560px) {
+      .overview-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="../index.html">Back to Main Website</a>
-      <a href="satellite-data-communication.docx" target="_blank" rel="noopener">Download Word Document</a>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Report navigation">
+      <a class="brand" href="../index.html">Data Communication Assignment</a>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#overview">Overview</a></li>
+        <li><a href="#diagram">Diagram</a></li>
+        <li><a href="#report">Report</a></li>
+        <li><a href="satellite-data-communication.docx" target="_blank" rel="noopener">Download</a></li>
+      </ul>
     </nav>
   </header>
 
   <main>
-    <a class="button" href="satellite-data-communication.docx" target="_blank" rel="noopener">
-      Download Original .docx
-    </a>
+    <section class="hero section-band report-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Satellite Report</p>
+        <h1>Satellite Data Communication: Principles and Applications</h1>
+        <p class="hero-text">
+          A web version of the satellite data communication report, designed to match the main
+          Data Communication Assignment website and remain easy to read on GitHub Pages.
+        </p>
+        <div class="report-actions">
+          <a class="primary-link" href="#report">Read Report</a>
+          <a class="secondary-link" href="satellite-data-communication.docx" target="_blank" rel="noopener">Download Word Document</a>
+          <a class="secondary-link" href="../index.html">Back To Main Page</a>
+        </div>
+      </div>
+    </section>
 
-    <article class="document">
-      <h1>Satellite Data Communication: Principles and Applications of Satellite</h1>
+    <section id="overview" class="section-band light">
+      <div class="section-heading">
+        <p class="eyebrow">Report Overview</p>
+        <h2>Main Ideas In The Report</h2>
+        <p>
+          The report explains how satellite systems transmit data, why different orbits are used,
+          how frequency bands affect performance, and how satellite networks support modern communication.
+        </p>
+      </div>
 
-      <h2>Abstract</h2>
-      <p>
-        Satellite communication has become an important part of global data infrastructure. It supports
-        telephone calls, television broadcasting, internet connectivity, Earth observation, navigation,
-        remote sensing, and communication in areas where terrestrial networks are limited.
-      </p>
-      <p>
-        This assignment studies satellite data communication, including High-Throughput Satellites,
-        spot beam technology, orbital dynamics, frequency spectrum allocation, signal modulation,
-        latency, weather effects, cyber security, and future integration with 6G networks.
-      </p>
+      <div class="overview-grid">
+        <article class="overview-card">
+          <span>01</span>
+          <h3>Global Coverage</h3>
+          <p>Satellites connect remote communities, aircraft, ships, and disaster zones where terrestrial networks may not reach.</p>
+        </article>
+        <article class="overview-card">
+          <span>02</span>
+          <h3>Orbit Design</h3>
+          <p>GEO, MEO, and LEO satellites balance coverage area, signal delay, cost, and the number of satellites required.</p>
+        </article>
+        <article class="overview-card">
+          <span>03</span>
+          <h3>Spot Beams</h3>
+          <p>High-Throughput Satellites focus signal power into smaller areas to increase capacity through frequency reuse.</p>
+        </article>
+        <article class="overview-card">
+          <span>04</span>
+          <h3>Future Networks</h3>
+          <p>Satellite systems are becoming part of hybrid networks with fiber, cellular systems, IoT, and future 6G services.</p>
+        </article>
+      </div>
+    </section>
 
-      <h2>Introduction</h2>
-      <p>
-        Since the launch of Sputnik 1 in 1957, satellite communication has developed from simple beacon
-        transmission into advanced broadband and data communication systems. Satellites now help carry
-        global internet traffic, video streaming, IoT sensor data, navigation information, and emergency
-        communication.
-      </p>
-      <p>
-        Satellites are especially useful where fiber optic cables, cellular towers, or other terrestrial
-        systems cannot easily reach, such as rural areas, oceans, aircraft routes, and disaster zones.
-      </p>
+    <section id="diagram" class="section-band systems-section">
+      <div class="section-heading">
+        <p class="eyebrow">Satellite Diagram</p>
+        <h2>How Satellite Data Communication Works</h2>
+        <p>
+          A user terminal sends an uplink signal to the satellite. The satellite processes or relays the
+          signal, then sends a downlink to a gateway, network, or another user terminal.
+        </p>
+      </div>
 
-      <h2>Types of Satellite Orbits</h2>
-      <h3>Geostationary Earth Orbit</h3>
-      <p>
-        GEO satellites orbit about 35,786 km above the equator and appear fixed over one location on
-        Earth. They provide wide coverage and are useful for television broadcast and long-distance
-        communication, but they have higher latency because of the long distance signals must travel.
-      </p>
+      <div class="diagram-wrap" role="img" aria-label="Diagram of satellite data communication showing uplink, satellite relay, gateway, and internet connection.">
+        <svg class="satellite-diagram" viewBox="0 0 1000 470" xmlns="http://www.w3.org/2000/svg">
+          <rect x="28" y="34" width="944" height="360" rx="22" fill="#f8fafc" stroke="#b9ddda" stroke-width="3"/>
+          <text x="500" y="82" text-anchor="middle" class="diagram-title">Satellite Data Communication Path</text>
+          <circle cx="500" cy="170" r="48" fill="#ffffff" stroke="#0f766e" stroke-width="5"/>
+          <rect x="462" y="154" width="76" height="28" rx="6" fill="#1d4ed8"/>
+          <line x1="500" y1="122" x2="500" y2="92" stroke="#102033" stroke-width="6" stroke-linecap="round"/>
+          <line x1="452" y1="170" x2="410" y2="155" stroke="#102033" stroke-width="6" stroke-linecap="round"/>
+          <line x1="548" y1="170" x2="590" y2="155" stroke="#102033" stroke-width="6" stroke-linecap="round"/>
+          <text x="500" y="245" text-anchor="middle" class="diagram-label">Communication Satellite</text>
+          <path d="M260 315 C320 245, 385 205, 455 180" fill="none" stroke="#1d4ed8" stroke-width="7" stroke-linecap="round"/>
+          <polygon points="455,180 426,176 442,203" fill="#1d4ed8"/>
+          <text x="310" y="235" text-anchor="middle" class="diagram-label">Uplink</text>
+          <path d="M545 180 C640 215, 708 250, 760 315" fill="none" stroke="#b7791f" stroke-width="7" stroke-linecap="round"/>
+          <polygon points="760,315 735,299 731,329" fill="#b7791f"/>
+          <text x="690" y="235" text-anchor="middle" class="diagram-label">Downlink</text>
+          <rect x="150" y="310" width="180" height="58" rx="8" fill="#ffffff" stroke="#0f766e" stroke-width="4"/>
+          <path d="M205 310 L240 268 L275 310" fill="none" stroke="#102033" stroke-width="6" stroke-linecap="round"/>
+          <text x="240" y="410" text-anchor="middle" class="diagram-label">User Terminal</text>
+          <rect x="700" y="310" width="190" height="58" rx="8" fill="#ffffff" stroke="#0f766e" stroke-width="4"/>
+          <path d="M730 336 H860 M756 321 H836 M774 351 H818" stroke="#102033" stroke-width="6" stroke-linecap="round"/>
+          <text x="795" y="410" text-anchor="middle" class="diagram-label">Gateway / Internet</text>
+        </svg>
+      </div>
+    </section>
 
-      <h3>Medium Earth Orbit</h3>
-      <p>
-        MEO satellites operate between low and geostationary orbit. They are commonly used for navigation
-        systems such as GPS and can also support broadband communication with lower delay than GEO systems.
-      </p>
+    <section id="report" class="section-band report-shell">
+      <div class="report-layout">
+        <aside class="report-toc">
+          <h2>Report Links</h2>
+          <a href="#overview">Overview</a>
+          <a href="#diagram">Satellite Diagram</a>
+          <a href="#report">Read Report</a>
+          <a href="satellite-data-communication.docx" target="_blank" rel="noopener">Download Original Word File</a>
+          <a href="../index.html#resources">Main Website Resources</a>
+        </aside>
 
-      <h3>Low Earth Orbit</h3>
-      <p>
-        LEO satellites orbit closer to Earth, often between 300 km and 2,000 km. They provide lower
-        latency and are used by modern satellite internet constellations. Because each satellite covers
-        a smaller area, many satellites are required for continuous global service.
-      </p>
+        <article class="report-document">
+          <h2>Abstract</h2>
+          <p>
+            Satellite communication has become an important part of global data infrastructure. It supports
+            telephone calls, television broadcasting, internet connectivity, Earth observation, navigation,
+            remote sensing, and communication in areas where terrestrial networks are limited.
+          </p>
+          <p>
+            This report studies satellite data communication, including High-Throughput Satellites,
+            spot beam technology, orbital dynamics, frequency spectrum allocation, signal modulation,
+            latency, weather effects, cyber security, and future integration with 6G networks.
+          </p>
 
-      <h2>Frequency Spectrum Management</h2>
-      <p>
-        Satellite communication uses radio frequency bands such as C-band, Ku-band, and Ka-band. C-band
-        is more resistant to rain fade, while Ku-band and Ka-band provide higher bandwidth but are more
-        affected by weather conditions.
-      </p>
-      <p>
-        Spectrum is limited, so international bodies such as the International Telecommunication Union
-        help regulate how frequencies and orbital slots are assigned.
-      </p>
+          <h2>Introduction</h2>
+          <p>
+            Since the launch of Sputnik 1 in 1957, satellite communication has developed from simple beacon
+            transmission into advanced broadband and data communication systems. Satellites now help carry
+            global internet traffic, video streaming, IoT sensor data, navigation information, and emergency
+            communication.
+          </p>
+          <p>
+            Satellites are especially useful where fiber optic cables, cellular towers, or other terrestrial
+            systems cannot easily reach, such as rural areas, oceans, aircraft routes, and disaster zones.
+          </p>
 
-      <h2>Signal Modulation and Coding</h2>
-      <p>
-        Modern satellite systems use modulation and coding methods such as QPSK, 8-PSK, QAM, DVB-S2,
-        and DVB-S2X to transmit more data efficiently. Error correction techniques help protect signals
-        from noise, weather, and interference.
-      </p>
+          <h2>Types Of Satellite Orbits</h2>
+          <h3>Geostationary Earth Orbit</h3>
+          <p>
+            GEO satellites orbit about 35,786 km above the equator and appear fixed over one location on
+            Earth. They provide wide coverage and are useful for television broadcast and long-distance
+            communication, but they have higher latency because of the long distance signals must travel.
+          </p>
 
-      <h2>High-Throughput Satellites and Spot Beams</h2>
-      <p>
-        High-Throughput Satellites use narrow spot beams to focus power and bandwidth on specific
-        locations. This approach is similar to cellular networks because frequencies can be reused in
-        different coverage areas, increasing total capacity.
-      </p>
-      <p>
-        Spot beam technology allows satellites to deliver stronger service to selected areas and support
-        broadband applications such as internet access, streaming, cloud services, and enterprise networks.
-      </p>
+          <h3>Medium Earth Orbit</h3>
+          <p>
+            MEO satellites operate between low and geostationary orbit. They are commonly used for navigation
+            systems such as GPS and can also support broadband communication with lower delay than GEO systems.
+          </p>
 
-      <h2>Disadvantages of Satellite Communication</h2>
-      <ul>
-        <li>Latency can affect real-time applications such as gaming, video calls, and cloud services.</li>
-        <li>Rain fade and atmospheric attenuation can weaken signals, especially at higher frequencies.</li>
-        <li>Satellite bandwidth is expensive compared with fiber optic systems in dense urban areas.</li>
-        <li>Orbital congestion and space debris create safety and sustainability challenges.</li>
-        <li>Wireless transmission creates security risks such as interception, jamming, and spoofing.</li>
-      </ul>
+          <h3>Low Earth Orbit</h3>
+          <p>
+            LEO satellites orbit closer to Earth, often between 300 km and 2,000 km. They provide lower
+            latency and are used by modern satellite internet constellations. Because each satellite covers
+            a smaller area, many satellites are required for continuous global service.
+          </p>
 
-      <h2>Disadvantages of Terrestrial Communication</h2>
-      <p>
-        Terrestrial communication systems also have limitations. Fiber optic networks are expensive to
-        install in remote locations, while cellular systems depend on nearby base stations and may not
-        cover oceans, mountains, or disaster-affected areas.
-      </p>
+          <h2>Frequency Spectrum Management</h2>
+          <p>
+            Satellite communication uses radio frequency bands such as C-band, Ku-band, and Ka-band. C-band
+            is more resistant to rain fade, while Ku-band and Ka-band provide higher bandwidth but are more
+            affected by weather conditions.
+          </p>
+          <p>
+            Spectrum is limited, so international bodies such as the International Telecommunication Union
+            help regulate how frequencies and orbital slots are assigned.
+          </p>
 
-      <h2>Synergy and Hybrid Architectures</h2>
-      <p>
-        The future of communication will likely combine terrestrial and satellite systems. 6G and
-        Non-Terrestrial Networks can allow devices to connect through ground networks or satellites,
-        depending on coverage, speed, and reliability needs.
-      </p>
+          <h2>Signal Modulation And Coding</h2>
+          <p>
+            Modern satellite systems use modulation and coding methods such as QPSK, 8-PSK, QAM, DVB-S2,
+            and DVB-S2X to transmit more data efficiently. Error correction techniques help protect signals
+            from noise, weather, and interference.
+          </p>
 
-      <h2>Conclusion</h2>
-      <p>
-        Satellite data communication is an essential part of modern global connectivity. It supports
-        broadband access, disaster recovery, aviation, maritime communication, navigation, Earth
-        observation, and future 6G networks. Although satellites face challenges such as latency,
-        weather attenuation, cost, and security, they remain valuable because they can reach places
-        terrestrial networks cannot.
-      </p>
-    </article>
+          <h2>High-Throughput Satellites And Spot Beams</h2>
+          <p>
+            High-Throughput Satellites use narrow spot beams to focus power and bandwidth on specific
+            locations. This approach is similar to cellular networks because frequencies can be reused in
+            different coverage areas, increasing total capacity.
+          </p>
+          <p>
+            Spot beam technology allows satellites to deliver stronger service to selected areas and support
+            broadband applications such as internet access, streaming, cloud services, and enterprise networks.
+          </p>
+
+          <h2>Disadvantages Of Satellite Communication</h2>
+          <ul>
+            <li>Latency can affect real-time applications such as gaming, video calls, and cloud services.</li>
+            <li>Rain fade and atmospheric attenuation can weaken signals, especially at higher frequencies.</li>
+            <li>Satellite bandwidth is expensive compared with fiber optic systems in dense urban areas.</li>
+            <li>Orbital congestion and space debris create safety and sustainability challenges.</li>
+            <li>Wireless transmission creates security risks such as interception, jamming, and spoofing.</li>
+          </ul>
+
+          <h2>Disadvantages Of Terrestrial Communication</h2>
+          <p>
+            Terrestrial communication systems also have limitations. Fiber optic networks are expensive to
+            install in remote locations, while cellular systems depend on nearby base stations and may not
+            cover oceans, mountains, or disaster-affected areas.
+          </p>
+
+          <h2>Synergy And Hybrid Architectures</h2>
+          <p>
+            The future of communication will likely combine terrestrial and satellite systems. 6G and
+            Non-Terrestrial Networks can allow devices to connect through ground networks or satellites,
+            depending on coverage, speed, and reliability needs.
+          </p>
+
+          <h2>Conclusion</h2>
+          <p>
+            Satellite data communication is an essential part of modern global connectivity. It supports
+            broadband access, disaster recovery, aviation, maritime communication, navigation, Earth
+            observation, and future 6G networks. Although satellites face challenges such as latency,
+            weather attenuation, cost, and security, they remain valuable because they can reach places
+            terrestrial networks cannot.
+          </p>
+        </article>
+      </div>
+    </section>
   </main>
+
+  <footer class="site-footer">
+    <p>Satellite Data Communication Report | Benjamin Aneefi</p>
+  </footer>
 </body>
 </html>

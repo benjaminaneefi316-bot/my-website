@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Communication Assignment Report</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../CSS/style.css">
+  <style>
+    .report-hero {
+      grid-template-columns: minmax(0, 1fr);
+      min-height: auto;
+      padding-top: 86px;
+      padding-bottom: 64px;
+    }
+
+    .report-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .report-shell {
+      background: #fff;
+    }
+
+    .report-layout {
+      display: grid;
+      grid-template-columns: 270px minmax(0, 1fr);
+      gap: 32px;
+      align-items: start;
+    }
+
+    .report-toc {
+      position: sticky;
+      top: 94px;
+      padding: 22px;
+      background: #eef7f6;
+      border: 1px solid #b9ddda;
+    }
+
+    .report-toc h2 {
+      margin-bottom: 12px;
+      font-size: 1.05rem;
+    }
+
+    .report-toc a {
+      display: block;
+      padding: 8px 0;
+      color: var(--teal);
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .report-document {
+      padding: clamp(24px, 4vw, 54px);
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+    }
+
+    .report-document h2 {
+      margin-top: 44px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      font-size: clamp(1.55rem, 3vw, 2.4rem);
+    }
+
+    .report-document h2:first-child {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+
+    .report-document h3 {
+      margin-top: 28px;
+      color: var(--teal);
+      font-size: 1.18rem;
+    }
+
+    .report-document p,
+    .report-document li,
+    .report-document td {
+      color: var(--muted);
+    }
+
+    .report-document ul,
+    .report-document ol {
+      display: grid;
+      gap: 10px;
+      padding-left: 24px;
+    }
+
+    .report-table {
+      width: 100%;
+      margin: 18px 0 28px;
+      border-collapse: collapse;
+      background: #fff;
+    }
+
+    .report-table th,
+    .report-table td {
+      padding: 14px 16px;
+      border: 1px solid var(--line);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    .report-table th {
+      color: var(--ink);
+      background: #eef7f6;
+      font-weight: 800;
+    }
+
+    code {
+      display: inline-block;
+      padding: 4px 8px;
+      color: #fff;
+      background: var(--ink);
+      font-family: Consolas, monospace;
+    }
+
+    @media (max-width: 860px) {
+      .report-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .report-toc {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Report navigation">
+      <a class="brand" href="../index.html">Data Communication Assignment</a>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="#objectives">Objectives</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#deployment">GitHub</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-band report-hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Project Report</p>
+        <h1>Data Communication Assignment Report</h1>
+        <p class="hero-text">
+          This report explains the purpose, features, technologies, deployment process,
+          challenges, and lessons learned from building the Data Communication assignment website.
+        </p>
+        <div class="report-actions">
+          <a class="primary-link" href="#report">Read Report</a>
+          <a class="secondary-link" href="../index.html">Back To Main Website</a>
+          <a class="secondary-link" href="satellite-data-communication.html">Satellite Report</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="report" class="section-band report-shell">
+      <div class="report-layout">
+        <aside class="report-toc">
+          <h2>Report Links</h2>
+          <a href="#introduction">Introduction</a>
+          <a href="#objectives">Objectives</a>
+          <a href="#technologies">Technologies</a>
+          <a href="#features">Features</a>
+          <a href="#topics">Topics Covered</a>
+          <a href="#deployment">GitHub Deployment</a>
+          <a href="#lessons">Lessons Learned</a>
+          <a href="#conclusion">Conclusion</a>
+        </aside>
+
+        <article class="report-document">
+          <h2 id="introduction">Introduction</h2>
+          <p>
+            This project was created as part of the Data Communication assignment. The aim of the project
+            was to design and develop a complete web page that summarizes everything studied during the
+            semester in Data Communication. The website was built using HTML, CSS, and JavaScript and was
+            uploaded to GitHub for online access and submission.
+          </p>
+          <p>
+            The website presents important concepts learned in class, including networking fundamentals,
+            transmission media, signals, wireless technologies, cybersecurity, data protection, and
+            communication systems. It also demonstrates practical web development skills such as navigation
+            menus, hyperlinks, responsive layouts, multimedia integration, and GitHub deployment.
+          </p>
+
+          <h2 id="objectives">Objectives Of The Project</h2>
+          <ul>
+            <li>To summarize all topics studied in Data Communication.</li>
+            <li>To create a responsive and attractive website.</li>
+            <li>To include personal information such as name, ID, biography, and image.</li>
+            <li>To create internal navigation using menu tabs.</li>
+            <li>To include external and internal hyperlinks.</li>
+            <li>To add a telegraph communication diagram.</li>
+            <li>To embed a YouTube video inside the web page.</li>
+            <li>To publish the project on GitHub using GitHub Pages.</li>
+            <li>To improve practical web development skills.</li>
+          </ul>
+
+          <h2 id="technologies">Technologies Used</h2>
+          <table class="report-table">
+            <thead>
+              <tr>
+                <th>Technology</th>
+                <th>Purpose</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>HTML</td>
+                <td>Structure of the website</td>
+              </tr>
+              <tr>
+                <td>CSS</td>
+                <td>Styling and layout</td>
+              </tr>
+              <tr>
+                <td>JavaScript</td>
+                <td>Interactive features</td>
+              </tr>
+              <tr>
+                <td>GitHub</td>
+                <td>Hosting and version control</td>
+              </tr>
+              <tr>
+                <td>GitHub Pages</td>
+                <td>Website publishing</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 id="features">Features Of The Website</h2>
+          <p>The completed website contains all required features from the assignment instructions.</p>
+
+          <h3>1. Personal Information Section</h3>
+          <p>
+            The website includes the student name, student ID, short biography, and personal image.
+            This section introduces the student and explains interests in networking and communication
+            technologies.
+          </p>
+
+          <h3>2. Navigation Menu</h3>
+          <p>
+            The website contains more than three navigation tabs, including Home, Concepts, Topics,
+            Telegraph, Inspiration, and Resources. These menu items link to sections within the same
+            page using anchor links.
+          </p>
+
+          <h3>3. Five Or More Sections</h3>
+          <ol>
+            <li>Hero/Home Section</li>
+            <li>Profile Section</li>
+            <li>Concepts Section</li>
+            <li>Topic Notes Section</li>
+            <li>Telegraph Diagram Section</li>
+            <li>Inspiration Section</li>
+            <li>Resources Section</li>
+          </ol>
+
+          <h2 id="topics">Topics Covered</h2>
+          <p>The website summarizes several important topics studied during the semester, including:</p>
+          <ul>
+            <li>Networking Fundamentals</li>
+            <li>OSI and TCP/IP Models</li>
+            <li>Transmission Media</li>
+            <li>Signals</li>
+            <li>Wireless Networks</li>
+            <li>Cybersecurity</li>
+            <li>CIA Triad and Cryptography</li>
+            <li>Data Protection Policies</li>
+            <li>Network Simulation Practical</li>
+            <li>Revision Topics</li>
+          </ul>
+
+          <h2>Telegraph Diagram</h2>
+          <p>
+            A telegraph communication diagram was included in the project to demonstrate one of the
+            earliest communication systems. The diagram explains how electrical signals travel between
+            a sender and a receiver through transmission wires.
+          </p>
+          <p>
+            This section helps connect historical communication systems with modern networking technologies.
+          </p>
+
+          <h2>Inspiration Section</h2>
+          <p>
+            The website contains a section describing what inspires the student about communication
+            technology. The section explains how communication systems help people access education,
+            business opportunities, emergency services, and information globally.
+          </p>
+
+          <h2>Hyperlinks And Resources</h2>
+          <h3>Internal Links</h3>
+          <p>Navigation tabs connect users to sections within the same page.</p>
+
+          <h3>External Links</h3>
+          <p>External resources include the Turnitin submission page, Data Communication references, and OSI Model resources.</p>
+
+          <h3>Assignment Link</h3>
+          <p>The assignment copy link opens in a new browser tab using <code>target="_blank"</code>.</p>
+
+          <h3>YouTube Video Link</h3>
+          <p>
+            A YouTube telegraph tutorial video was embedded inside the web page using an iframe so the
+            video plays within the same tab.
+          </p>
+
+          <h2 id="deployment">GitHub Deployment</h2>
+          <p>The website was uploaded to GitHub and published using GitHub Pages.</p>
+          <ol>
+            <li>Create repository named “Data Communication Assignment”.</li>
+            <li>Upload all project files.</li>
+            <li>Commit changes.</li>
+            <li>Enable GitHub Pages.</li>
+            <li>Copy repository link for submission.</li>
+          </ol>
+          <p>GitHub was used for version control and online hosting.</p>
+
+          <h2>Challenges Faced</h2>
+          <ul>
+            <li>Incorrect file paths for CSS and JavaScript.</li>
+            <li>GitHub Pages not loading styles correctly.</li>
+            <li>Case sensitivity issues with folder names.</li>
+            <li>Responsive layout adjustments.</li>
+            <li>Image scaling and positioning.</li>
+          </ul>
+          <p>These issues were solved by correcting folder structures and updating file references.</p>
+
+          <h2 id="lessons">Lessons Learned</h2>
+          <ul>
+            <li>Website structure using HTML.</li>
+            <li>Responsive design using CSS.</li>
+            <li>JavaScript interactivity.</li>
+            <li>GitHub repository management.</li>
+            <li>GitHub Pages deployment.</li>
+            <li>Navigation systems using anchor links.</li>
+            <li>Embedding multimedia content.</li>
+            <li>Organizing course materials digitally.</li>
+          </ul>
+
+          <h2 id="conclusion">Conclusion</h2>
+          <p>
+            This project successfully met all assignment requirements by creating a fully functional and
+            responsive Data Communication portfolio website. The website summarizes important course
+            concepts while demonstrating practical web development and GitHub deployment skills.
+          </p>
+          <p>
+            The project also improved understanding of networking technologies, communication systems,
+            and modern web development practices.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Data Communication Assignment Report | Benjamin Aneefi</p>
+  </footer>
+</body>
+</html>
